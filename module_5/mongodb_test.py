@@ -1,26 +1,9 @@
-""" 
-    Title: mongodb_test.py
-    Author: Professor Krasso
-    Date: 10 July 2020
-    Description: Test program for connecting to a 
-                 MongoDB Atlas cluster
-"""
-
-""" import statements """
+#import pymongo from MongoClient
 from pymongo import MongoClient
-
-# MongoDB connection string 
-url = "mongodb+srv://admin:admin@cluster0.rsnru.mongodb.net/pytech?retryWrites=true&w=majority"
-
-# connect to the MongoDB cluster 
+#assign connection string to variable url
+url = "mongodb+srv://admin:admin@cluster0.8do7jnn.mongodb.net/?retryWrites=true&w=majority"
+#create a variable named client
 client = MongoClient(url)
-
-# connect pytech database
+#create a variable named db
 db = client.pytech
-
-# show the connected collections 
-print("\n -- Pytech COllection List --")
-print(db.list_collection_names())
-
-# show an exit message
-input("\n\n  End of program, press any key to exit... ")
+print(db.list_collection_names)     
